@@ -1,0 +1,27 @@
+.paginator {
+    margin: 0 auto;
+}
+.paginator button {
+    background-color: black;
+    border: 1px solid snow;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.paginator button:hover {
+    background-color: red;
+    cursor: grabbing;
+}
+.paginator button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
+.paginator .active {
+    background-color: snow;
+    color: black;
+}
+
+/*# sourceMappingURL=Paginator.css.map */

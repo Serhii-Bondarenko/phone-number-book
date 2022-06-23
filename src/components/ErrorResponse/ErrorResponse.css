@@ -1,0 +1,10 @@
+.error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    font-size: 42px;
+    letter-spacing: 1px;
+}
+
+/*# sourceMappingURL=ErrorResponse.css.map */

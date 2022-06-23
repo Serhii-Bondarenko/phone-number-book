@@ -1,0 +1,77 @@
+.phone__form {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0;
+    align-items: center;
+    background-color: white;
+    color: black;
+    padding: 50px;
+    border-radius: 5px;
+}
+.phone__form .phone__form-numbers,
+.phone__form .phone__form-input {
+    margin-top: 30px;
+}
+.phone__form .field {
+    border-color: black;
+    align-self: start;
+    font-weight: bold;
+    font-size: 20px;
+}
+.phone__form button {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 4px;
+    background-color: black;
+}
+.phone__form .phone__form-numbers {
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 500px;
+}
+.phone__form .phone__form-numbers li {
+    flex: 0 1 120px;
+    cursor: pointer;
+    padding: 5px;
+}
+.phone__form .phone__form-numbers li:hover {
+    background-color: grey;
+    color: snow;
+    box-shadow: 1px 1px 2px 1px #000000;
+}
+.phone__form .phone__form-numbers .btn {
+    cursor: pointer;
+    background-color: transparent;
+    color: black;
+    font-size: 18px;
+    margin-left: 10px;
+}
+.phone__form .phone__form-numbers .btn:hover {
+    color: #e20202;
+}
+.phone__form .phone__form-input {
+    display: flex;
+    align-items: end;
+    align-self: start;
+}
+.phone__form .phone__form-add-btn:hover {
+    padding: 3px;
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+}
+.phone__form .phone__form-save-btn {
+    letter-spacing: 1px;
+    font-size: 18px;
+    width: 100px;
+    margin-top: 50px;
+}
+.phone__form .phone__form-save-btn:hover {
+    background-color: darkslategrey;
+}
+
+/*# sourceMappingURL=PhoneHandlerForm.css.map */

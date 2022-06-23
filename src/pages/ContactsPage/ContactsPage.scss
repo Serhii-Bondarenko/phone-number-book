@@ -1,0 +1,9 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+  row-gap: 80px;
+
+  .lds-ring {
+    margin: 100px auto 0;
+  }
+}

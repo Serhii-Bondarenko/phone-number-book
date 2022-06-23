@@ -1,0 +1,37 @@
+.form__body, .form__body-search {
+  display: flex;
+  align-items: baseline;
+}
+
+.form__body {
+  column-gap: 50px;
+  justify-content: center;
+
+  .form__body-sort {
+    select {
+      font-size: 16px;
+      padding: 8px;
+      background-color: grey;
+      color: snow;
+      cursor: pointer;
+    }
+  }
+
+  .form__body-search {
+    column-gap: 20px;
+  }
+
+  .form__search-btn {
+    letter-spacing: 1px;
+    background-color: transparent;
+    padding: 6px;
+    font-size: 16px;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: black;
+      color: snow;
+    }
+  }
+}
+

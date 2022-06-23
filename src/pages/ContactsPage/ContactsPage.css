@@ -1,0 +1,10 @@
+.contacts {
+    display: flex;
+    flex-direction: column;
+    row-gap: 80px;
+}
+.contacts .lds-ring {
+    margin: 100px auto 0;
+}
+
+/*# sourceMappingURL=ContactsPage.css.map */
