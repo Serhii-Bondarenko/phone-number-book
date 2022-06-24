@@ -10,7 +10,7 @@ import { createUser, updateUser } from '../../store';
 import { personSchema } from '../../formValidation';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 
-const PhoneHandlerForm = ({ setIsShow }) => {
+const PhoneHandlerForm = ({ closeModal }) => {
     const { reducer } = constants;
 
     const { uid } = useParams();
@@ -54,7 +54,7 @@ const PhoneHandlerForm = ({ setIsShow }) => {
     const sendUserData = (data) => {
         const reqBody = { ...data, phoneNumbers, id: uid };
         uid ? dispatch(updateUser({ data: reqBody })) : dispatch(createUser({ data: reqBody }));
-        uid ? setIsShow(false) : resetFields();
+        uid ? closeModal(false) : resetFields();
     };
 
     const removeFromList = (event, listItem) => {

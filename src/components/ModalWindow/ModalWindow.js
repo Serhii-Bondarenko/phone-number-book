@@ -5,12 +5,13 @@ import { PhoneHandlerForm } from '../PhoneHandlerForm/PhoneHandlerForm';
 
 const ModalWindow = ({ setIsShow }) => {
     const closeModal = () => setIsShow(false);
+
     return (
         <div className="modal">
             <div className="close__modal" onClick={closeModal}>
                 &times;
             </div>
-            <PhoneHandlerForm setIsShow={setIsShow} />
+            <PhoneHandlerForm closeModal={closeModal} />
         </div>
     );
 };
