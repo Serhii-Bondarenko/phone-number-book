@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 import './Header.css';
 import { ModalWindow } from '../ModalWindow/ModalWindow';
+import { constants } from '../../config';
 
 const Header = () => {
-    const [isShow, setIsShow] = useState(false);
+    const { reducer } = constants;
+
     const { uid } = useParams();
+    const { selectedPerson } = useSelector((state) => state[reducer]);
+    const [isShow, setIsShow] = useState(false);
+
     return (
         <>
             <header className="header">
@@ -14,9 +20,11 @@ const Header = () => {
                     <Link to="/">
                         <h3>Home</h3>
                     </Link>
-                    <div onClick={() => setIsShow(true)} className="open__modal">
-                        {uid ? 'Edit' : 'Add person'}
-                    </div>
+                    {!(uid && !selectedPerson) && (
+                        <div onClick={() => setIsShow(true)} className="open__modal">
+                            {uid ? 'Edit' : 'Add person'}
+                        </div>
+                    )}
                 </nav>
                 <hr />
             </header>
