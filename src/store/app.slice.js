@@ -44,9 +44,9 @@ export const createUser = createAsyncThunk(
 
 export const updateUser = createAsyncThunk(
     'appSlice/updateUser',
-    async ({ data }, { dispatch }) => {
+    async ({ id, data }, { dispatch }) => {
         try {
-            await appService.updateById(data.id, data);
+            await appService.updateById(id, data);
             dispatch(setPerson({ person: data }));
             alert(`User ${data.name} successfully updated`);
         } catch (e) {

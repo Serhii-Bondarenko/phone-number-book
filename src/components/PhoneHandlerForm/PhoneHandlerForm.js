@@ -52,10 +52,10 @@ const PhoneHandlerForm = ({ closeModal }) => {
     };
 
     const sendUserData = (data) => {
-        const reqBody = { ...data, phoneNumbers, id: uid };
+        const reqBody = { ...data, phoneNumbers };
 
         if (uid) {
-            dispatch(updateUser({ data: reqBody }));
+            dispatch(updateUser({ id: uid, data: reqBody }));
             closeModal();
             return;
         }
