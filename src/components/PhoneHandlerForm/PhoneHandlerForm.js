@@ -53,8 +53,15 @@ const PhoneHandlerForm = ({ closeModal }) => {
 
     const sendUserData = (data) => {
         const reqBody = { ...data, phoneNumbers, id: uid };
-        uid ? dispatch(updateUser({ data: reqBody })) : dispatch(createUser({ data: reqBody }));
-        uid ? closeModal(false) : resetFields();
+
+        if (uid) {
+            dispatch(updateUser({ data: reqBody }));
+            closeModal();
+            return;
+        }
+
+        dispatch(createUser({ data: reqBody }));
+        resetFields();
     };
 
     const removeFromList = (event, listItem) => {
